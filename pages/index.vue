@@ -22,24 +22,26 @@
 					</el-button>
 				</div>
 			</div>
+			<client-only>
+				<vue-particles
+					color="#dedede"
+					:particle-opacity="0.7"
+					:particles-number="80"
+					shape-type="circle"
+					:particle-size="4"
+					lines-color="#dedede"
+					:lines-width="1"
+					:line-linked="true"
+					:line-opacity="0.4"
+					:lines-distance="150"
+					:move-speed="3"
+					:hover-effect="true"
+					hover-mode="grab"
+					:click-effect="true"
+					click-mode="push"
+				/>
+			</client-only>
 		</div>
-		<vue-particles
-			color="#dedede"
-			:particle-opacity="0.7"
-			:particles-number="80"
-			shape-type="circle"
-			:particle-size="4"
-			lines-color="#dedede"
-			:lines-width="1"
-			:line-linked="true"
-			:line-opacity="0.4"
-			:lines-distance="150"
-			:move-speed="3"
-			:hover-effect="true"
-			hover-mode="grab"
-			:click-effect="true"
-			click-mode="push"
-		/>
 	</div>
 </template>
 
@@ -50,7 +52,7 @@
 			return {
 				blogUrl: 'https://blog.guoyucloud.com',
 				mobileAppUrl: 'https://m.guoyucloud.com',
-				pcAppUrl: 'https://www.guoyucloud.com'
+				pcAppUrl: 'https://main.guoyucloud.com'
 			}
 		},
 		components: {
@@ -81,9 +83,6 @@
 		height: 100%;
 		.welcome-main{
 			width: 100%;
-			position: absolute;
-			top: 0;
-			left: 0;
 			text-align: center;
 			display: flex;
 			flex-flow: row wrap;
@@ -110,11 +109,13 @@
 					}
 				}
 			}
-		}
-		#particles-js{
-			width: 100%;
-			height: 100%;
-			background-image: url("~assets/background.jpg");
+			#particles-js{
+				position: fixed;
+				z-index: -1;
+				width: 100%;
+				height: 100%;
+				background-image: url("~assets/background.jpg");
+			}
 		}
 	}
 </style>
