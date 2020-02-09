@@ -5,7 +5,6 @@
 				<img src="~/assets/GuoYuCloudLogoAndTitle.png" alt="">
 				<div class="welcome-go-home">
 					<el-button
-						round
 						class="welcome-go-home__button"
 						type="danger"
 						@click="_goHome()"
@@ -13,12 +12,18 @@
 						进入主页
 					</el-button>
 					<el-button
-						round
 						class="welcome-go-home__button"
 						type="danger"
 						@click="_goBlog()"
 					>
 						进入博客
+					</el-button>
+					<el-button
+						class="welcome-go-home__button"
+						type="danger"
+						@click="_goGitHub()"
+					>
+						GitHub
 					</el-button>
 				</div>
 			</div>
@@ -50,6 +55,7 @@
 		name: 'Welcome',
 		data () {
 			return {
+				githubUrl: 'https://github.com/guoyucloud',
 				blogUrl: 'https://blog.guoyucloud.com',
 				mobileAppUrl: 'https://m.guoyucloud.com',
 				pcAppUrl: 'https://main.guoyucloud.com'
@@ -71,6 +77,9 @@
 			},
 			_goBlog () {
 				window.open(this.blogUrl)
+			},
+			_goGitHub () {
+				window.open(this.githubUrl)
 			}
 		}
 	}
@@ -97,9 +106,10 @@
 					width: 100%;
 					.welcome-go-home__button{
 						/*background-color: rgb(197,48,39);*/
+						width: 105px;
 						color: #FFF;
-						background-color: rgba(197,0,0,0.3);
-						border-color:rgba(197,48,39,0.3);
+						background-color: rgba(197,0,0,0.6);
+						border-color:rgba(197,48,39,0.6);
 					}
 					.welcome-go-home__button:hover{
 						/*background-color: rgb(197,48,39);*/
@@ -112,6 +122,8 @@
 			#particles-js{
 				position: fixed;
 				z-index: -1;
+				top: 0;
+				left: 0;
 				width: 100%;
 				height: 100%;
 				background-image: url("~assets/background.jpg");
