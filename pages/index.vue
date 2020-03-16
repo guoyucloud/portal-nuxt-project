@@ -47,6 +47,13 @@
 				/>
 			</client-only>
 		</div>
+		<footer class="welcome-footer">
+			<span>@GuoYu</span>
+			&nbsp;|&nbsp;
+			<span>WEB前端技术</span>
+			&nbsp;|&nbsp;
+			<span><a href="http://www.beian.miit.gov.cn/" target="_blank">津ICP备18000299号-1</a></span>
+		</footer>
 	</div>
 </template>
 
@@ -127,6 +134,20 @@
 				width: 100%;
 				height: 100%;
 				background-image: url("~assets/background.jpg");
+			}
+		}
+		.welcome-footer{
+			font-size: 12px;
+			position: absolute;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			bottom: 0;
+			color: white;
+			a{
+				color: white;
+				text-decoration: none;
 			}
 		}
 	}
