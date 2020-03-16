@@ -16,6 +16,7 @@ build_job:
     - master
   script:
     - echo "build ......"
+    - npm config set strict-ssl false
     - npm install -g cnpm --registry=https://registry.npm.taobao.org
     - cnpm install
     - npm run generate
