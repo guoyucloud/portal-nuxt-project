@@ -4,13 +4,20 @@
 			<div class="welcome-title">
 				<img src="~/assets/GuoYuCloudLogoAndTitle.png" alt="">
 				<div class="welcome-go-home">
-					<el-button
-						class="welcome-go-home__button"
-						type="danger"
-						@click="_goHome()"
-					>
-						进入主页
-					</el-button>
+<!--					<el-button-->
+<!--						class="welcome-go-home__button"-->
+<!--						type="danger"-->
+<!--						@click="_goHome()"-->
+<!--					>-->
+<!--						进入主页-->
+<!--					</el-button>-->
+          <el-button
+              class="welcome-go-home__button"
+              type="danger"
+              @click="_goJS()"
+          >
+            进入简书
+          </el-button>
 					<el-button
 						class="welcome-go-home__button"
 						type="danger"
@@ -64,6 +71,7 @@
 			return {
 				githubUrl: 'https://github.com/guoyucloud',
 				blogUrl: 'https://blog.guoyucloud.com',
+        jsUrl: 'https://www.jianshu.com/u/2bd16cf6f5fe',
 				mobileAppUrl: 'https://m.guoyucloud.com',
 				pcAppUrl: 'https://main.guoyucloud.com'
 			}
@@ -82,6 +90,9 @@
 					window.open(this.pcAppUrl)
 				}
 			},
+      _goJS () {
+        window.open(this.jsUrl)
+      },
 			_goBlog () {
 				window.open(this.blogUrl)
 			},
