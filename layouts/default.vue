@@ -1,10 +1,30 @@
 <template>
-  <div>
+  <div class="guoyucloud-layout">
     <nuxt />
+    <client-only>
+      <vue-particles
+          class="layout-particles"
+          color="#dedede"
+          :particle-opacity="0.7"
+          :particles-number="80"
+          shape-type="circle"
+          :particle-size="4"
+          lines-color="#dedede"
+          :lines-width="1"
+          :line-linked="true"
+          :line-opacity="0.4"
+          :lines-distance="150"
+          :move-speed="3"
+          :hover-effect="true"
+          hover-mode="grab"
+          :click-effect="true"
+          click-mode="push"
+      />
+    </client-only>
   </div>
 </template>
 
-<style>
+<style lang="scss">
 html {
   font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
     Roboto, 'Helvetica Neue', Arial, sans-serif;
@@ -52,4 +72,26 @@ html {
   color: #fff;
   background-color: #35495e;
 }
+
+#particles-js{
+  background-image: url("~assets/background.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.guoyucloud-layout{
+  position: relative;
+  width: 100%;
+  //height: 100%;
+  .layout-particles{
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+  }
+}
+
+
 </style>

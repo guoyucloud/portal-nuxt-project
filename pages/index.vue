@@ -1,66 +1,54 @@
 <template>
 	<div class="welcome">
 		<div class="welcome-main">
-			<div class="welcome-title">
-				<img src="~/assets/GuoYuCloudLogoAndTitle.png" alt="">
-				<div class="welcome-go-home">
-<!--					<el-button-->
-<!--						class="welcome-go-home__button"-->
-<!--						type="danger"-->
-<!--						@click="_goHome()"-->
-<!--					>-->
-<!--						进入主页-->
-<!--					</el-button>-->
-          <el-button
-              class="welcome-go-home__button"
-              type="danger"
-              @click="_goJS()"
-          >
-            进入简书
-          </el-button>
-					<el-button
-						class="welcome-go-home__button"
-						type="danger"
-						@click="_goBlog()"
-					>
-						进入博客
-					</el-button>
-					<el-button
-						class="welcome-go-home__button"
-						type="danger"
-						@click="_goGitHub()"
-					>
-						GitHub
-					</el-button>
-				</div>
-			</div>
-			<client-only>
-				<vue-particles
-					color="#dedede"
-					:particle-opacity="0.7"
-					:particles-number="80"
-					shape-type="circle"
-					:particle-size="4"
-					lines-color="#dedede"
-					:lines-width="1"
-					:line-linked="true"
-					:line-opacity="0.4"
-					:lines-distance="150"
-					:move-speed="3"
-					:hover-effect="true"
-					hover-mode="grab"
-					:click-effect="true"
-					click-mode="push"
-				/>
-			</client-only>
+      <div class="welcome-logo">
+        <img src="~/assets/GuoYuCloudLogoAndTitle.png" alt="">
+      </div>
+      <div class="welcome-go-home">
+        <!--					<el-button-->
+        <!--						class="welcome-go-home__button"-->
+        <!--						type="danger"-->
+        <!--						@click="_goHome()"-->
+        <!--					>-->
+        <!--						进入主页-->
+        <!--					</el-button>-->
+        <el-button
+            class="welcome-go-home__button"
+            type="danger"
+            @click="_goJS()"
+        >
+          进入简书
+        </el-button>
+        <el-button
+            class="welcome-go-home__button"
+            type="danger"
+            @click="_goBlog()"
+        >
+          进入博客
+        </el-button>
+        <el-button
+            class="welcome-go-home__button"
+            type="danger"
+            @click="_goGitHub()"
+        >
+          GitHub
+        </el-button>
+        <el-button
+            class="welcome-go-home__button"
+            type="danger"
+            @click="_goWrite()"
+        >
+          开始写作
+        </el-button>
+      </div>
 		</div>
-		<footer class="welcome-footer">
+		<div class="welcome-footer">
 			<span>@GuoYu</span>
 			&nbsp;|&nbsp;
 			<span>WEB前端技术</span>
 			&nbsp;|&nbsp;
 			<span><a href="http://www.beian.miit.gov.cn/" target="_blank">津ICP备18000299号-1</a></span>
-		</footer>
+		</div>
 	</div>
 </template>
 
@@ -73,7 +61,8 @@
 				blogUrl: 'https://blog.guoyucloud.com',
         jsUrl: 'https://www.jianshu.com/u/2bd16cf6f5fe',
 				mobileAppUrl: 'https://m.guoyucloud.com',
-				pcAppUrl: 'https://main.guoyucloud.com'
+				pcAppUrl: 'https://main.guoyucloud.com',
+        writeUrl: '/editor'
 			}
 		},
 		components: {
@@ -98,63 +87,62 @@
 			},
 			_goGitHub () {
 				window.open(this.githubUrl)
-			}
+			},
+      _goWrite () {
+        window.open(this.writeUrl)
+      }
 		}
 	}
 </script>
 
 <style lang="scss">
 	.welcome{
-		position: relative;
-		width: 100%;
-		height: 100%;
+    //position: relative;
+		display: flex;
+    flex-flow: row wrap;
+		width: 100vw;
+		height: 100vh;
 		.welcome-main{
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      align-items: center;
 			width: 100%;
-			text-align: center;
-			display: flex;
-			flex-flow: row wrap;
-			justify-content:center;/*x轴对齐方式*/
-			align-items:center;     /*y轴对滴方式*/
-			height: 100vh;        /**屏幕高度百分百*/
-			.welcome-title{
-				img{
-					width: 100%;
-				}
-				.welcome-go-home{
-					width: 100%;
-					.welcome-go-home__button{
-						/*background-color: rgb(197,48,39);*/
-						width: 105px;
-						color: #FFF;
-						background-color: rgba(197,0,0,0.6);
-						border-color:rgba(197,48,39,0.6);
-					}
-					.welcome-go-home__button:hover{
-						/*background-color: rgb(197,48,39);*/
-						color: #FFF;
-						background-color: rgba(197,48,39,1);
-						border-color:rgba(197,48,39,1);
-					}
-				}
-			}
-			#particles-js{
-				position: fixed;
-				z-index: -1;
-				top: 0;
-				left: 0;
-				width: 100%;
-				height: 100%;
-				background-image: url("~assets/background.jpg");
-			}
+      .welcome-logo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50vw;
+        img{
+          width: 100%;
+        }
+      }
+      .welcome-go-home{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        .welcome-go-home__button{
+          /*background-color: rgb(197,48,39);*/
+          width: 105px;
+          color: #FFF;
+          background-color: rgba(197,0,0,0.6);
+          border-color:rgba(197,48,39,0.6);
+        }
+        .welcome-go-home__button:hover{
+          /*background-color: rgb(197,48,39);*/
+          color: #FFF;
+          background-color: rgba(197,48,39,1);
+          border-color:rgba(197,48,39,1);
+        }
+      }
 		}
 		.welcome-footer{
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
 			font-size: 12px;
-			position: absolute;
-			display: flex;
-			justify-content: center;
-			align-items: center;
 			width: 100%;
-			bottom: 0;
 			color: white;
 			a{
 				color: white;
