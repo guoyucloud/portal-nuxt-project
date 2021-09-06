@@ -42,13 +42,6 @@
         </el-button>
       </div>
 		</div>
-		<div class="welcome-footer">
-			<span>@GuoYu</span>
-			&nbsp;|&nbsp;
-			<span>WEB前端技术</span>
-			&nbsp;|&nbsp;
-			<span><a href="http://www.beian.miit.gov.cn/" target="_blank">津ICP备18000299号-1</a></span>
-		</div>
 	</div>
 </template>
 
@@ -97,11 +90,10 @@
 
 <style lang="scss">
 	.welcome{
-    //position: relative;
 		display: flex;
     flex-flow: row wrap;
-		width: 100vw;
-		height: 100vh;
+		width: 100%;
+		height: 100%;
 		.welcome-main{
       display: flex;
       flex-flow: row wrap;
@@ -136,18 +128,6 @@
           border-color:rgba(197,48,39,1);
         }
       }
-		}
-		.welcome-footer{
-      display: flex;
-      justify-content: center;
-      align-items: flex-end;
-			font-size: 12px;
-			width: 100%;
-			color: white;
-			a{
-				color: white;
-				text-decoration: none;
-			}
 		}
 	}
 </style>

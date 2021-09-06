@@ -21,6 +21,13 @@
           click-mode="push"
       />
     </client-only>
+    <div class="welcome-footer">
+      <span>@GuoYu</span>
+      &nbsp;|&nbsp;
+      <span>WEB前端技术</span>
+      &nbsp;|&nbsp;
+      <span><a href="http://www.beian.miit.gov.cn/" target="_blank">津ICP备18000299号-1</a></span>
+    </div>
   </div>
 </template>
 
@@ -81,15 +88,29 @@ html {
 }
 .guoyucloud-layout{
   position: relative;
-  width: 100%;
-  //height: 100%;
+  width: 100vw;
+  height: 100vh;
   .layout-particles{
     position: fixed;
     z-index: -1;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
+  }
+  .welcome-footer{
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    width: 100%;
+    color: white;
+    a{
+      color: white;
+      text-decoration: none;
+    }
   }
 }
 
