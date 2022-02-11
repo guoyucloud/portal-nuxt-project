@@ -36,9 +36,9 @@
         <el-button
             class="welcome-go-home__button"
             type="danger"
-            @click="_goWrite()"
+            @click="_goUtils()"
         >
-          开始写作
+          实用工具
         </el-button>
       </div>
 		</div>
@@ -55,7 +55,7 @@
         jsUrl: 'https://www.jianshu.com/u/2bd16cf6f5fe',
 				mobileAppUrl: 'https://m.guoyucloud.com',
 				pcAppUrl: 'https://main.guoyucloud.com',
-        writeUrl: '/editor'
+        utilsUrl: '/utils'
 			}
 		},
 		components: {
@@ -81,8 +81,8 @@
 			_goGitHub () {
 				window.open(this.githubUrl)
 			},
-      _goWrite () {
-        window.open(this.writeUrl)
+      _goUtils () {
+        window.open(this.utilsUrl)
       }
 		}
 	}
