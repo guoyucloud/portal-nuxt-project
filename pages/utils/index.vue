@@ -27,7 +27,7 @@ export default {
         },
         {
           'title': 'uuid生成器',
-          'path': '/utils//uuid'
+          'path': '/utils/uuid'
         },
       ]
     };
