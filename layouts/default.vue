@@ -1,5 +1,10 @@
 <template>
   <div class="guoyucloud-layout">
+    <div class="layout-header">
+      <div class="layout-header-logo" @click="_goHome">
+        <img src="~assets/GuoYuCloudMiniLogo.png">
+      </div>
+    </div>
     <nuxt />
     <client-only>
       <vue-particles
@@ -30,6 +35,23 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  name: 'defaultLayouts',
+  data () {
+    return {
+    }
+  },
+  components: {
+  },
+  methods: {
+    _goHome () {
+      this.$router.push('/')
+    }
+  }
+}
+</script>
 
 <style lang="scss">
 html {
@@ -90,6 +112,25 @@ html {
   position: relative;
   width: 100vw;
   height: 100vh;
+  .layout-header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 55px;
+    .layout-header-logo{
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      margin-top: 25px;
+      margin-left: 25px;
+      cursor: pointer;
+      img{
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
   .layout-particles{
     position: fixed;
     z-index: -1;

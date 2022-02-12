@@ -82,7 +82,7 @@
 				window.open(this.githubUrl)
 			},
       _goUtils () {
-        window.open(this.utilsUrl)
+        this.$router.push(this.utilsUrl)
       }
 		}
 	}
