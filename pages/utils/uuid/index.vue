@@ -20,7 +20,7 @@
 </template>
 
 <script>
-// import {v4}  from 'uuid'
+import {v4}  from 'uuid'
 export default {
   name: "uuid",
   components: {},
@@ -31,7 +31,7 @@ export default {
   },
   methods: {
     createUuid(){
-      this.uuidData = this.$uuidV4();
+      this.uuidData = v4();
     },
     onCopy: function (e) {
       this.$message({

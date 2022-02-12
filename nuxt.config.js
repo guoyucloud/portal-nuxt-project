@@ -32,7 +32,6 @@ module.exports = {
   */
   plugins: [
 	  {src: '@/plugins/element-ui', ssr: true},
-    {src: '~plugins/uuid', ssr: true},
 	  {src: '~plugins/vue-particles', ssr: false},
    {src: '~plugins/vue-clipboard', ssr: false},
    {src: '~plugins/mavon-editor', ssr: false}
