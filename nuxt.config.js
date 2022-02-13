@@ -31,10 +31,11 @@ module.exports = {
   ** Plugins to load before mounting the App
   */
   plugins: [
-	  {src: '@/plugins/element-ui', ssr: true},
-	  {src: '~plugins/vue-particles', ssr: false},
-   {src: '~plugins/vue-clipboard', ssr: false},
-   {src: '~plugins/mavon-editor', ssr: false}
+    {src: '@/plugins/element-ui', ssr: true},
+    {src: '~plugins/vue-particles', ssr: false},
+    {src: '~plugins/vue-clipboard', ssr: false},
+    {src: '~plugins/mavon-editor', ssr: false},
+    {src: '~plugins/baidu.js', ssr: false }
   ],
   /*
   ** Nuxt.js dev-modules
