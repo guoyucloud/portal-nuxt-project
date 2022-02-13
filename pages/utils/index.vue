@@ -34,8 +34,6 @@ export default {
   },
   methods: {
     routerPush(params){
-      debugger;
-      console.log(params)
       this.$router.push(params.path);
     }
   }

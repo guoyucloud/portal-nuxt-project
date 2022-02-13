@@ -34,8 +34,7 @@ module.exports = {
     {src: '@/plugins/element-ui', ssr: true},
     {src: '~plugins/vue-particles', ssr: false},
     {src: '~plugins/vue-clipboard', ssr: false},
-    {src: '~plugins/mavon-editor', ssr: false},
-    {src: '~plugins/baidu.js', ssr: false }
+    {src: '~plugins/mavon-editor', ssr: false}
   ],
   /*
   ** Nuxt.js dev-modules
