@@ -51,7 +51,7 @@
 		data () {
 			return {
 				githubUrl: 'https://github.com/guoyucloud',
-				blogUrl: 'https://blog.guoyucloud.com',
+				blogUrl: 'https://www.guoyu.ren',
         jsUrl: 'https://www.jianshu.com/u/2bd16cf6f5fe',
 				mobileAppUrl: 'https://m.guoyucloud.com',
 				pcAppUrl: 'https://main.guoyucloud.com',
