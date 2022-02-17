@@ -1,6 +1,6 @@
 # portal-nuxt-project
 
-> guoyucloud nuxt project
+> 多听，少说，接受每一个人的责难，但是保留你的最后裁决
 
 ## Build Setup
 
