@@ -2,7 +2,7 @@
 	<div class="welcome">
 		<div class="welcome-main">
       <div class="welcome-logo">
-        <img src="~/assets/GuoYuCloudLogoAndTitle.png" alt="">
+        <img src="~/assets/newGuoYuCloudLogoAndTitle.png" alt="">
       </div>
       <div class="welcome-go-home">
         <!--					<el-button-->
@@ -105,6 +105,7 @@
         justify-content: center;
         align-items: center;
         width: 50vw;
+        max-width: 2000px;
         img{
           width: 100%;
         }
