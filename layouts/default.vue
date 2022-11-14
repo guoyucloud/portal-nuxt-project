@@ -31,7 +31,7 @@
       &nbsp;|&nbsp;
       <span>WEB前端技术</span>
       &nbsp;|&nbsp;
-      <span><a href="http://www.beian.miit.gov.cn/" target="_blank">津ICP备18000299号-1</a></span>
+      <span><a href="https://beian.miit.gov.cn/" target="_blank">津ICP备18000299号-1</a></span>
     </div>
   </div>
 </template>
